@@ -26,7 +26,7 @@ $resultats=$unC->selectAll();
 
 if(!$page) {
     $unC->setTable("vuecorpro");
-    include("vue/vueaccueil.php");
+    include("vue/VueAccueil.php");
 
 }
 
@@ -37,7 +37,7 @@ switch($page)
     case 1:
         $unC->setTable("vuecorpro");
         $resultats=$unC->selectAll();
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
 
            break;
 
@@ -76,7 +76,7 @@ switch($page)
 
 // INSCRIPTION COMMERCIAL
     case 3:
-        include("vue/inscriptioncom.php");
+        include("vue/InscriptionCom.php");
 
 
 
@@ -136,7 +136,7 @@ switch($page)
     case 5: //connection user
        /* $unCon = new Tableau("localhost", "regroup", "root", "", "user");
         $rescon=$unCon->selectAll();*/
-        include("vue/vuecon.php");
+        include("vue/VueCon.php");
         if(isset($_POST['connexion'])) //lancer fonction enregistrement Com
         {
             $uneCo = new Connexion();
@@ -159,7 +159,7 @@ switch($page)
         }
         break;
     case 6: //connection com
-        include("vue/vuecon.php");
+        include("vue/VueCon.php");
         if(isset($_POST['connexion'])) //lancer fonction enregistrement Com
         {
             $uneCo = new Connexion();
@@ -187,7 +187,7 @@ switch($page)
 
         $resultats=$unC->selectAllWhere("meuble");
 
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
         break;
 
     case 8: //vue speciale
@@ -196,15 +196,15 @@ switch($page)
         $type="informatique";
         $resultats=$unC->selectAllWhere($type);
 
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
         break;
     case 9: //vue speciale
         // SELECT * FROM VueProduit WHERE Type="informatique";
         $unC->setTable("vuecorpro");
-        $type="informatique";
+        $type="accessoire";
         $resultats=$unC->selectAllWhere($type);
 
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
         break;
     case 10: //vue speciale
         // SELECT * FROM VueProduit WHERE Type="informatique";
@@ -212,14 +212,14 @@ switch($page)
         $type="accessoire";
         $resultats=$unC->selectAllWhere("$type");
 
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
         break;
     case 11: //vue speciale
         // SELECT * FROM VueProduit WHERE Type="informatique";
         $unC->setTable("vuecorpro");
         $type="chaussure";
         $resultats=$unC->selectAllWhere("$type");
-        include("vue/vueaccueil.php");
+        include("vue/VueAccueil.php");
 
         break;
     case 12: //vue d'un seul produit
@@ -236,7 +236,7 @@ switch($page)
 
         //$similaire=$unC->SelectAllWhere($type);
 
-        include("vue/produit.php");
+        include("vue/VueProduit.php");
 
 
         break;
