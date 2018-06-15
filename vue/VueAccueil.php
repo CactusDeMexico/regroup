@@ -216,89 +216,6 @@ foreach ($resultats as $unResultat) {
 
 
 
-
-
-            <!-- __________________EXEMPLE PRODUIT_______________________________
-    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-        <div class="thumbnail"> <img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                                            class="img-responsive">
-            <div class="caption">
-                <ul class="product-flags">
-                    <li class="product-flag new">Nouveau</li>
-                </ul>
-                <h3>Product</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <h4>prix</h4>
-
-                <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a></p>
-            </div>
-        </div>
-    </div>
-    -->
-
-
-<!--
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-                <div class="thumbnail"><img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                            class="img-responsive">
-                    <div class="caption">
-                        <h3>Product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                        <p><a href="#" class="btn btn-primary" role="button"><span
-                                        class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 hidden-lg hidden-md hidden-sm">
-                <div class="thumbnail"><img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                            class="img-responsive">
-                    <div class="caption">
-                        <h3>Product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                        <p><a href="#" class="btn btn-primary" role="button"><span
-                                        class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center hidden-xs">
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="thumbnail"><img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                            class="img-responsive">
-                    <div class="caption">
-                        <h3>Product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                        <p><a href="#" class="btn btn-primary" role="button"><span
-                                        class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="thumbnail"><img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                            class="img-responsive">
-                    <div class="caption">
-                        <h3>Product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                        <p><a href="#" class="btn btn-primary" role="button"><span
-                                        class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="thumbnail"><img src="Content/images/400X200.gif" alt="Thumbnail Image 1"
-                                            class="img-responsive">
-                    <div class="caption">
-                        <h3>Product</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                        <p><a href="#" class="btn btn-primary" role="button"><span
-                                        class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to Cart</a>
-                        </p>
-                    </div>
-                </div> -->
             </div>
         </div>
         <nav class="text-center">
@@ -320,6 +237,7 @@ foreach ($resultats as $unResultat) {
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <tr>
+                        <th width="5%">ID</th>
                         <th width="40%">Item Name</th>
                         <th width="10%">Quantity</th>
                         <th width="20%">Price</th>
@@ -334,6 +252,7 @@ foreach ($resultats as $unResultat) {
                         {
                             ?>
                             <tr>
+                                <td><?php echo $values["item_id"]; ?></td>
                                 <td><?php echo $values["item_name"]; ?></td>
                                 <td><?php echo $values["item_quantity"]; ?></td>
                                 <td>€ <?php echo $values["item_price"]; ?></td>

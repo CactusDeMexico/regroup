@@ -44,6 +44,19 @@
         {
             return $this->unModele->SelectAllWhere($Type);
         }
+        public function SelectTranche($IdT)
+        {
+            return $this->unModele->SelectTranche($IdT);
+        }
+        public function SelectIdTranche($Lien)
+        {
+            return $this->unModele->SelectIdTranche($Lien);
+        }
+        public function SelectIDUser($User)
+        {
+            return $this->unModele->selectIDUser($User);
+
+        }
         public function SelectUn($Lien)
         {
             return $this->unModele->SelectUn($Lien);

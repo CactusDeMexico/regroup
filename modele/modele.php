@@ -73,7 +73,7 @@
 			}
 			$chaine=implode(",",$parametres);
 			$requete="INSERT INTO  ".$this->table."  VALUES(NULL,".$chaine.");";
-			echo $requete ;
+
 
 					   
 					   if($this->pdo!=null)
@@ -97,7 +97,7 @@
             }
             $chaine=implode(",",$parametres);
             $requete="INSERT INTO  ".$this->table."  VALUES(".$chaine.");";
-            echo $requete ;
+
 
 
             if($this->pdo!=null)
@@ -160,6 +160,7 @@
 
             }
         }
+
         public function selectIdEntreprise($nom,$adresse)
         {
             $donnees=array(":nom"=>$nom, ":ad"=>$adresse);
@@ -173,7 +174,7 @@
                 $select->execute($donnees);
                 $resultat = $select->fetch();
                 return  $resultat['IdEntreprise'];
-				var_dump($resultat);
+
             }
         }
 
@@ -267,6 +268,66 @@
             }
 
 
+        }
+        function SelectIdTranche($Lien)
+        {
+            if($this->pdo!=null)
+            {
+
+                $donnees = array(":ly" => $Lien);
+
+                $requete = "SELECT IdTranche FROM  ".$this->table." WHERE IdProduit = :ly ;";
+
+                $select = $this->pdo->prepare($requete);
+                $select->execute($donnees);
+                $resultats = $select -> fetchAll();
+
+                return $resultats;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+        function SelectTranche($IdT)
+        {
+            if($this->pdo!=null)
+            {
+
+                $donnees = array(":ly" => $IdT);
+
+                $requete = "SELECT * FROM  ".$this->table." WHERE IdTranche = :ly ;";
+
+                $select = $this->pdo->prepare($requete);
+                $select->execute($donnees);
+                $resultats= $select -> fetchAll();
+
+                return  $resultats;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public function SelectIDUser($User)
+        {
+
+            $donnees=array(":nom"=>$User);
+
+            $requete="select IdPersonne from ".$this->table. " where Username = :nom;";
+
+
+            if($this->pdo!=null)
+            {
+                $select=$this->pdo->prepare($requete);
+                $select->execute($donnees);
+                $resultat = $select->fetch();
+                return  $resultat['IdPersonne'];
+
+            }
         }
 }
 		?>

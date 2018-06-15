@@ -11,4 +11,10 @@ si apres ce delais passé les adherants du produit complémentaire auront alors 
 
 Alors seulement a la fin de ses 48h ou paiement effectué totalement dans ce groupe
 un remboursement de la diffrence se fera
+ *
+ *
+ * if isset tranche:
+ *          if groupe = tranche: ex(par tranche de 10 produit reduction de x%
+ *              remboursement envoie de mail 
+ *
  */

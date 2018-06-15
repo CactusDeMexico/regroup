@@ -65,15 +65,15 @@ session_start();?>
                     </div>
                     <ul class="nav navbar-nav navbar-right hidden-sm">
 
-                        <li><a href="" onclick="return logout_click();">Se déconnecter</a> </li>
+                        <li><a href="logout.php" >Se déconnecter</a> </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 Mes produits
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="index.php?page=x">Nouveau Produit</a> </li>
-                                <li><a href="index.php?page=x">Lister produit</a> </li>
+                                <li><a href="index.php?page=15">Nouveau Produit</a> </li>
+                                <li><a href="index.php?page=13">Lister produit</a> </li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Contacter Administrateur</a> </li>
                             </ul>
@@ -100,12 +100,13 @@ session_start();?>
                         ?>
                     <div class="navbar-form navbar-right">
                         <p>Bonjour <?php echo$_SESSION['user'] ?></p>
-                        <img src="Content/images/membre.png" style= "max-height:48px ;max-width: 48px;">
+                        <a href="index.php?page=14">
+                        <img src="Content/images/membre.png" style= "max-height:48px ;max-width: 48px;"></a>
                     </div>
 
                     <ul class="nav navbar-nav navbar-right hidden-sm">
 
-                        <li><a href="" onclick="return logout_click();">Se déconnecter</a> </li>
+                        <li><a href="logout.php" >Se déconnecter</a> </li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -179,12 +180,8 @@ session_start();?>
         {
              if(confirm("Se Déconnecter ?"))
              {
-                    <?php/*
-                        $_SESSION = array();
-                        session_destroy();
-                        session_start();
-                        $Connecte=false;*/
-                     ?>
+                 document.location.href="logout.php";
+
                     return true;
             }
             else{
